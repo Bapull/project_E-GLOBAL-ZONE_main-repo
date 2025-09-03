@@ -6,13 +6,15 @@ import store from "./redux/store";
 import { Provider } from "react-redux";
 
 import dotenv from "dotenv";
+import { GoogleOAuthProvider } from "@react-oauth/google";
 dotenv.config();
 
 ReactDOM.render(
+	<GoogleOAuthProvider clientId={process.env.REACT_APP_GOOGLE_CLIENT_ID}>
 	<React.StrictMode>
 		<Provider store={store}>
 			<App />
 		</Provider>
-	</React.StrictMode>,
+	</React.StrictMode></GoogleOAuthProvider>,
 	document.getElementById("root")
 );
