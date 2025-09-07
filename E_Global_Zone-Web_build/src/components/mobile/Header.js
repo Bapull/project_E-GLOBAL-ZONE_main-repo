@@ -12,6 +12,7 @@ import { selectIsOnline, setOnlineOffline } from '../../redux/confSlice/confSlic
  */
 export default function Header() {
   const dispatch = useDispatch();
+  const history = useHistory();
   const isOnline = useSelector(selectIsOnline);
 
   const handleLogout = () => {
@@ -23,11 +24,13 @@ export default function Header() {
   const handleOnlineClick = () => {
     dispatch(setOnlineOffline(true));
     alert('온라인으로 변경되었습니다.');
+    history.push('/schedule');
   };
 
   const handleOfflineClick = () => {
     dispatch(setOnlineOffline(false));
     alert('오프라인으로 변경되었습니다.');
+    history.push('/schedule');
   };
 
   return (
