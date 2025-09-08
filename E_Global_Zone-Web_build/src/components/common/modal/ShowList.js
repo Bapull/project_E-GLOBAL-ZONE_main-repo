@@ -185,20 +185,6 @@ export default function ShowList({
           <p className="name">
             {user.userClass === conf.userClass.MANAGER
               ? std_for_name
-              : user.name}
-            {sch_type === "online" && ` / PW : ${sch_for_zoom_pw}`}
-          </p>
-        </div>
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "flex-end",
-          }}
-        >
-          <p className="name">
-            {user.userClass === conf.userClass.MANAGER
-              ? std_for_name
               : user.name}{" "}
             /{" "}
             {sch_type === "offline" ? (
@@ -333,47 +319,32 @@ export default function ShowList({
 
       <div className="link_container">
         <div className="link_top_tit">
-          <p className="tit">{sch_type === "offline" ? "장소" : "접속정보"}</p>
-          {sch_type === "online" &&
-            (updateMode ? (
-              <label
-                htmlFor="link_input"
-                className="link_bbtn save"
-                onClick={saveZoomLink}
-              >
-                저장
-              </label>
-            ) : (
-              <label
-                htmlFor="link_input"
-                className="link_bbtn"
-                onClick={() => setUpdateMode(true)}
-              >
-                편집
-              </label>
-            ))}
+          <p className="tit">접속정보</p>
+          {updateMode ? (
+            <label
+              htmlFor="link_input"
+              className="link_bbtn save"
+              onClick={saveZoomLink}
+            >
+              저장
+            </label>
+          ) : (
+            <label
+              htmlFor="link_input"
+              className="link_bbtn"
+              onClick={() => setUpdateMode(true)}
+            >
+              편집
+            </label>
+          )}
         </div>
-        {sch_type === "offline" ? (
-          <div
-            className="link_input"
-            style={{
-              padding: "8px",
-              backgroundColor: "#f8f9fa",
-              border: "1px solid #ddd",
-              borderRadius: "4px",
-            }}
-          >
-            {sch_location || "장소 정보가 없습니다"}
-          </div>
-        ) : (
-          <input
-            id="link_input"
-            className="link_input"
-            onChange={(e) => setZoomLink(e.target.value)}
-            value={zoomLink}
-            disabled={!updateMode}
-          />
-        )}
+        <input
+          id="link_input"
+          className="link_input"
+          onChange={(e) => setZoomLink(e.target.value)}
+          value={zoomLink}
+          disabled={!updateMode}
+        />
       </div>
 
       <div className="area">
@@ -425,6 +396,7 @@ export default function ShowList({
                             ].agree
                           }
                         </option>
+
                         <option
                           value={false}
                           selected={!permission}
