@@ -8,6 +8,7 @@ export const getAdminScheduleOnline = (params) => {
   console.log("getAdminScheduleOnline params:", { ...params, is_offline: 0 });
   return admin.get("schedule", { params: { ...params, is_offline: 0 } });
 };
+
 export const getAdminScheduleOffline = (params) => {
   console.log("getAdminScheduleOffline params:", { ...params, is_offline: 1 });
   return admin.get("schedule", { params: { ...params, is_offline: 1 } });
