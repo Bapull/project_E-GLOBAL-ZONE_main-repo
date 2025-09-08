@@ -711,7 +711,7 @@ export default function Schedules() {
                     </td>
                   </tr>
                 )}
-                {/* {schedules &&
+                {schedules &&
                   schedules.data &&
                   schedules.data.English.length > 0 && (
                     <tr>
@@ -723,8 +723,7 @@ export default function Schedules() {
                           fontWeight: "bold",
                         }}
                       >
-                        // rowSpan = 해당 언어 학생 수
-                        영어
+                        {/* rowSpan = 해당 언어 학생 수 영어 */}
                       </td>
                     </tr>
                   )}
@@ -745,8 +744,8 @@ export default function Schedules() {
                         <td id={`${v.std_for_id}_5`}></td>
                       </tr>
                     );
-                  })} */}
-                {schedules &&
+                  })}
+                {/* {schedules &&
                   schedules.data &&
                   schedules.data.Japanese.length > 0 && (
                     <tr>
@@ -758,7 +757,7 @@ export default function Schedules() {
                           fontWeight: "bold",
                         }}
                       >
-                        {/* rowSpan = 해당 언어 학생 수 */}
+                        // rowSpan = 해당 언어 학생 수
                         일본어
                       </td>
                     </tr>
@@ -781,7 +780,7 @@ export default function Schedules() {
                         <td id={`${v.std_for_id}_5`}></td>
                       </tr>
                     );
-                  })}
+                  })} */}
                 {/* {schedules &&
                   schedules.data &&
                   schedules.data.Chinese.length > 0 && (

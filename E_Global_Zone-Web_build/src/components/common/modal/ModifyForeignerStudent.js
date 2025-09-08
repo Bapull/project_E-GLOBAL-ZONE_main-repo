@@ -127,18 +127,18 @@ const InsertForeignerStudent = ({
                     <p>언어</p>
 
                     <select id="std_for_lang" name="std_info">
-                      {/* <option
-												value="영어"
-												selected={currentInfo.std_for_lang === "영어"}
-											>
-												영어
-											</option> */}
                       <option
+                        value="영어"
+                        selected={currentInfo.std_for_lang === "영어"}
+                      >
+                        영어
+                      </option>
+                      {/* <option
                         value="일본어"
                         selected={currentInfo.std_for_lang === "일본어"}
                       >
                         일본어
-                      </option>
+                      </option> */}
                       {/* <option
 												value="중국어"
 												selected={currentInfo.std_for_lang === "중국어"}
