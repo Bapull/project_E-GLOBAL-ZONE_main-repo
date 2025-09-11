@@ -319,8 +319,8 @@ export default function ShowList({
 
       <div className="link_container">
         <div className="link_top_tit">
-          <p className="tit">접속정보</p>
-          {updateMode ? (
+          <p className="tit">{sch_type==='online' ?"접속정보":"장소"}</p>
+          {sch_type==='online' && (updateMode ? (
             <label
               htmlFor="link_input"
               className="link_bbtn save"
@@ -336,7 +336,7 @@ export default function ShowList({
             >
               편집
             </label>
-          )}
+          ))}
         </div>
         <input
           id="link_input"

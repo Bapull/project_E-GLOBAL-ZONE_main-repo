@@ -2342,10 +2342,6 @@ table.pop_table3 td {
   color: #109586;
 }
 
-.popup.enrol .area ul li .edd-root::after {
-  background: #109586;
-}
-
 .popup.enrol .area ul li .edd-option-selected::before {
   border-bottom: 2px solid #109586;
   border-left: 2px solid #109586;
