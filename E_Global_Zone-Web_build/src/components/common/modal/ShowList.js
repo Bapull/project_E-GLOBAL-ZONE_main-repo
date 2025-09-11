@@ -338,13 +338,19 @@ export default function ShowList({
             </label>
           ))}
         </div>
-        <input
+        {sch_type==="online" ? <input
           id="link_input"
           className="link_input"
           onChange={(e) => setZoomLink(e.target.value)}
           value={zoomLink}
           disabled={!updateMode}
+        /> :<input
+          id="link_input"
+          className="link_input"
+          value={sch_location}
+          disabled={true}
         />
+        }
       </div>
 
       <div className="area">
